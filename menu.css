@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: rgba(211, 157, 100, 0.521);
+}
+
+.entet {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: rgb(101, 59, 15);
+}
+
+.logo {
+    color: rgb(240, 151, 56);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    color: rgb(239, 217, 193);
+    text-decoration: none;
+}
+
+.bannier {
+    position: relative;
+}
+
+.bannier img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.bannier-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(245, 215, 184);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.421);
+}
+
+.a { 
+    color: #c1c717; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.bannier h1 {
+    margin: 0 0 10px;
+    font-size: 2.5rem;
+    color: rgb(250, 230, 209);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 25px;
+    background-color: rgb(205, 134, 83);
+    color: black;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: bold;
+    transition: background-color 0s;
+}
+
+.btn:hover {
+    background-color: rgb(116, 59, 19);
+    color: white;
+}
+
+.conteneur {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.cartes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.carte {
+    position: relative;
+    flex: 1 1 250px;
+    background-color: rgba(255, 230, 204, 0.67);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+.carte img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.carte-text {
+    padding: 16px;
+}
+
+.carte-text h3 {
+    margin: 0 0 5px;
+}
+
+.carte-text p {
+    margin: 0 0 5px;
+    color: rgb(74, 83, 57);
+}
+
+.carte-text .prix {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(26, 135, 135);
+}
+
+.apropos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+}
+
+.apropos img {
+    flex: 1 1 100px;
+    min-width: 0;
+    border-radius: 12px;
+}
+
+.apropos-text {
+    flex: 1 1 300px;
+}
+
+.apropos-text h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+footer { 
+    background-color: rgb(101, 59, 15);
+    color: rgb(207, 199, 191); 
+    text-align: center; 
+    padding: 25px; 
+    font-weight: bold; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.wa {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: rgb(98, 59, 18);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: background-color 0s;
+}
+
+.wa:hover {
+    background-color: #432d05;
+    color: white;
+}
+
+.ba {
+    bottom: 40px;
+    right: 10px;
+    background-color: rgb(98, 59, 18);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0s;
+}
+
+.ba:hover {
+    background-color: #54360771;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .carte {
+        gap: 1.5rem;
+    }
+    .carte {
+        flex: 1 1 calc(50% - 1.5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .entet {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .menu {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bannier img {
+        height: 300px;
+    }
+
+    .bannier h1 {
+        font-size: 2rem;
+    }
+
+    .cartes {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .carte {
+        flex: 1 1 100%;
+    }
+
+    .conteneur {
+        padding: 20px 15px;
+    }
+}
